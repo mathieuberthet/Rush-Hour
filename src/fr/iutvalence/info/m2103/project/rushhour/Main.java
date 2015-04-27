@@ -1,4 +1,10 @@
+package fr.iutvalence.info.m2103.project.rushhour;
 
+/**
+ * 
+ * @author BERTHET Mathieu, BARRA Jérémy
+ *
+ */
 public class Main {
 
 	/**
@@ -7,7 +13,7 @@ public class Main {
 	 */
 	public static void main(String[] args) 
 	{
-		new PartieDeRushHour().jouer();
+		new PartieDeRushHour().Play();
 
 	}
 
