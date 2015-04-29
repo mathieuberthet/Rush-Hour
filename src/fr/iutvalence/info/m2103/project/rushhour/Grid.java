@@ -4,7 +4,7 @@ package fr.iutvalence.info.m2103.project.rushhour;
  * @author BERTHET Mathieu, BARRA Jérémy
  *
  */
-public class CarPark 
+public class Grid 
 {
 	/**
 	 * Define the length of the grid
@@ -19,22 +19,34 @@ public class CarPark
 	/**
 	 * The case of the grid
 	 */
-	private CarPark[][] cases;
+	private Grid[][] grid;
 	
 	/**
 	 * Create a new empty board
 	 */
-	public CarPark()
+	public Grid()
 	{
-		this.createBoard();
+		this.grid = new Grid[DEFAULT_LENGTH][DEFAULT_WIDTH];
 	}
 	
-	/**
-	 * Method which create a new plateau 
-	 */
-	public void createBoard()
+	private Grid obtenirCase(int numeroDeLigne, int numeroDeColonne)
 	{
-		this.cases = new CarPark[DEFAULT_LENGTH][DEFAULT_WIDTH];
+		return this.grid[numeroDeLigne][numeroDeColonne];
 	}
+
+		public String toString()
+		{
+			String GridAsciiArt = "";
+
+			for (int numeroDeLigne = 0; numeroDeLigne < DEFAULT_LENGTH; numeroDeLigne++)
+			{
+				for (int numeroDeColonne = 0; numeroDeColonne < DEFAULT_WIDTH; numeroDeColonne++)
+					GridAsciiArt += obtenirCase(numeroDeLigne, numeroDeColonne);
+				GridAsciiArt += "\n";
+			}
+
+			return GridAsciiArt;
+		}
+
 
 }
