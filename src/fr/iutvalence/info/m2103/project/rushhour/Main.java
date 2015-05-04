@@ -2,7 +2,7 @@ package fr.iutvalence.info.m2103.project.rushhour;
 
 /**
  * 
- * @author BERTHET Mathieu, BARRA Jérémy
+ * @author BERTHET Mathieu, BARRA JÃ©rÃ©my
  *
  */
 public class Main {

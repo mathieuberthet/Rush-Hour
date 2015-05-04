@@ -3,7 +3,7 @@ package fr.iutvalence.info.m2103.project.rushhour;
 /**
  * 
  * We define the truck as a special kind of vehicle
- * @author BERTHET Mathieu, BARRA Jérémy
+ * @author BERTHET Mathieu, BARRA JÃ©rÃ©my
  *
  */
 public class Truck extends Vehicle
@@ -20,9 +20,7 @@ public class Truck extends Vehicle
 	 */
 	public Truck(int size, Color color)
 	{
-		super();
-		this.setSize(DEFAULT_SIZE);
-		this.setColor(color);
+		super(DEFAULT_SIZE, color);
 	}
 }
 

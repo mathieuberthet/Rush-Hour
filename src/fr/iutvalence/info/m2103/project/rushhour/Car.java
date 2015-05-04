@@ -2,7 +2,7 @@ package fr.iutvalence.info.m2103.project.rushhour;
 
 /**
  *  We define the car as a special kind of vehicle
- * @author BERTHET Mathieu, BARRA Jérémy
+ * @author BERTHET Mathieu, BARRA JÃ©rÃ©my
  *
  */
 public class Car extends Vehicle
@@ -19,9 +19,7 @@ public class Car extends Vehicle
 	 */
 	public Car(int size, Color color)
 	{
-		super();
-		this.setSize(DEFAULT_SIZE);
-		this.setColor(color);
+		super(DEFAULT_SIZE, color);
 	}
 
 	

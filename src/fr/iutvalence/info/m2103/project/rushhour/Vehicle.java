@@ -2,30 +2,37 @@ package fr.iutvalence.info.m2103.project.rushhour;
 
 /**
  * Define vehicles' features
- * @author BERTHET Mathieu, BARRA Jérémy
+ * @author BERTHET Mathieu, BARRA JÃ©rÃ©my
  *
  */
 
 public abstract class Vehicle
 {
+	// TODO (done) if size and color are fixed, consider declaring field as private ones
 	/**
 	 * vehicles' size
 	 */
-	protected int size;
+	private int size;
 	
 	/**
 	 * vehicles' color
 	 */
-	protected Color color;
+	private Color color;
 	
 	
-	
+	/**
+	 * create an object vehicle 
+	 */
 	public Vehicle()
 	{
 		this.setSize(size);
 		this.setColor(color);
 	}
-	
+	/**
+	 * create an object vehicle with define both size and color
+	 * @param size size's vehicle
+	 * @param color color's vehicle
+	 */
 	public Vehicle(int size, Color color)
 	{
 		this.setSize(size);

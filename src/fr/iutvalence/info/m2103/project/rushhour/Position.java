@@ -1,5 +1,9 @@
 package fr.iutvalence.info.m2103.project.rushhour;
-
+/**
+ * allows to know vehicle's position
+ * @author BERTHET Mathieu, BARRA Jérémy
+ *
+ */
 public class Position {
 	/**
 	 * Le numéro de ligne
