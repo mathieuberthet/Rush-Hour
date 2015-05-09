@@ -1,7 +1,7 @@
 package fr.iutvalence.info.m2103.project.rushhour;
 
 /**
- * 
+ * class who initialize and launch the game
  * @author BERTHET Mathieu, BARRA Jérémy
  *
  */

@@ -17,7 +17,7 @@ public class Position {
 	
 	/**
 	 * Construit une nouvelle position, à l'intersection ligne/colonne donnée
-	 * @param numeroDeLigne le nuémro de ligne
+	 * @param numeroDeLigne le numéro de ligne
 	 * @param numeroDeColonne le numéro de colonne
 	 */
 	public Position(int numeroDeLigne, int numeroDeColonne)

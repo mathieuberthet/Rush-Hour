@@ -23,7 +23,7 @@ public enum Color
 	 * grey : vehicle's color
 	 * orange : vehicle's color
 	 * silver : vehicle's color
-	 * gold : vehicle's colo
+	 * gold : vehicle's color
 	 * skyblue : vehicle's color
 	 */
 	RED, BLUE, GREEN,  YELLOW, PURPLE, PINK, BLACK, GREY, ORANGE, SILVER, GOLD, SKYBLUE; 
@@ -40,7 +40,7 @@ public enum Color
 			case 0 :
 		        Color = "red";
 		        break;
-			    case 1 :
+			case 1 :
 		        Color = "blue";
 		        break;
 		    case 2 :

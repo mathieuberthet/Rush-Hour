@@ -16,7 +16,7 @@ public class RushHourGame {
 	//	this.Grid = 
 	}
 
-	// TODO fix naming conventions
+	// TODO (done) fix naming conventions
 	/**
 	 * Method which launch the game
 	 */
