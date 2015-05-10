@@ -21,19 +21,52 @@ public class Grid {
 	 * Grid cells
 	 */
 	// TODO (done) this is not a grid but a grid of grid (of grid...)
-	private Vehicle[][] cases;
+	private Case[][] cases;
 
 	/**
 	 * Create a new empty board
 	 */
 	public Grid() {
-		this.cases = new Vehicle[DEFAULT_LENGTH][DEFAULT_WIDTH];
+		this.cases = new Case[DEFAULT_LENGTH][DEFAULT_WIDTH];
 	}
-
-	private Vehicle obtenirCase(int numeroDeLigne, int numeroDeColonne) {
-		return this.cases[numeroDeLigne][numeroDeColonne];
+	
+/**
+ * get the case of the grid for a given position
+ * @param position the position
+ * @return the case of the grid for a given position
+ */
+	public Case obtenirCase(Position position) 
+	{
+		return this.cases[position.obtenirNumeroDeLigne()][position.obtenirNumeroDeColonne()];
 	}
+	
+	/**
+	 * Get the vehicle place on a given position
+	 * @param position the position
+	 * @return the vehicle on the case or null if we have nothing
+	 */
+	public Vehicle obtenirVehicle(Position position)
+	{
+		return obtenirCase(position).obtenirVehicle();
+	}
+	
+	/**
+	 * Move a vehicle
+	 * @param positionStart start position
+	 * @param positionEnd end position
+	 */
+	public void deplaceVehicle(Position positionStart, Position positionEnd)
+	{
+		Vehicle vehicleADeplacer = this.obtenirVehicle(positionStart);
+		if (vehicleADeplacer == null) return;
+		this.obtenirCase(positionEnd).placeVehicle(vehicleADeplacer);
+		this.obtenirCase(positionStart).removeVehicle();
+	}
+	
 
+	/**
+	 * Get a representation in Ascii art for the grid
+	 */
 	public String toString()
 	{
 		String GridAsciiArt = "";
@@ -41,7 +74,7 @@ public class Grid {
 		for (int numeroDeLigne = 0; numeroDeLigne < DEFAULT_LENGTH; numeroDeLigne++) 
 		{
 			for (int numeroDeColonne = 0; numeroDeColonne < DEFAULT_WIDTH; numeroDeColonne++)
-				GridAsciiArt += this.obtenirCase(numeroDeLigne, numeroDeColonne);
+				GridAsciiArt += this.obtenirCase(new Position(numeroDeLigne, numeroDeColonne));
 			GridAsciiArt += "\n";
 		}
 		return GridAsciiArt;
