@@ -18,9 +18,9 @@ public class Truck extends Vehicle
 	 * @param size the size of the truck
 	 * @param color the color of the truck
 	 */
-	public Truck(int size, Color color)
+	public Truck(boolean Vertical, int size, Color color)
 	{
-		super(DEFAULT_SIZE, color);
+		super(Vertical, DEFAULT_SIZE, color);
 	}
 }
 

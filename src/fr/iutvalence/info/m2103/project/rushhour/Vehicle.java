@@ -8,6 +8,23 @@ package fr.iutvalence.info.m2103.project.rushhour;
 
 public abstract class Vehicle
 {
+	/**
+	 * vehicle's orientation
+	 */
+	private boolean Vertical;
+	
+
+	/**
+	 * get orientation
+	 * @return
+	 */
+	public boolean isVertical() {
+		return Vertical;
+	}
+	public void setVertical(boolean vertical) {
+		Vertical = true;
+	}
+
 	// TODO (done) if size and color are fixed, consider declaring field as private ones
 	/**
 	 * vehicles' size
@@ -25,6 +42,7 @@ public abstract class Vehicle
 	 */
 	public Vehicle()
 	{
+		this.setVertical(Vertical);
 		this.setSize(size);
 		this.setColor(color);
 	}
@@ -33,8 +51,9 @@ public abstract class Vehicle
 	 * @param size size's vehicle
 	 * @param color color's vehicle
 	 */
-	public Vehicle(int size, Color color)
+	public Vehicle(boolean Vertical, int size, Color color)
 	{
+		this.setVertical(Vertical);
 		this.setSize(size);
 		this.setColor(color);
 	}

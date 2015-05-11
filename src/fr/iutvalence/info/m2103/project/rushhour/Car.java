@@ -10,17 +10,15 @@ public class Car extends Vehicle
 	/**
 	 * constant which defines car's size
 	 */
-	private final static int DEFAULT_SIZE = 2;
+	protected final static int DEFAULT_SIZE = 2;
 	
 	/**
 	 *  create a new car 
 	 * @param size the size of the car
 	 * @param color the color of the car
 	 */
-	public Car(int size, Color color)
+	public Car(boolean Vertical, int size, Color color)
 	{
-		super(DEFAULT_SIZE, color);
+		super(Vertical, DEFAULT_SIZE, color);
 	}
-
-	
 }
