@@ -18,10 +18,13 @@ public abstract class Vehicle
 	 * get orientation
 	 * @return
 	 */
-	public boolean isVertical() {
+	public boolean isVertical() 
+	{
 		return Vertical;
 	}
-	public void setVertical(boolean vertical) {
+	
+	public void setVertical(boolean vertical) 
+	{
 		Vertical = true;
 	}
 
