@@ -17,7 +17,7 @@ public class Grid {
 	 */
 	public final static int DEFAULT_WIDTH = 6;
 	
-	private Position position;
+
 
 	/**
 	 * Grid cells
@@ -38,12 +38,18 @@ public class Grid {
  * @param position the position
  * @return the case of the grid for a given position
  */
-	public Case obtenirCase(Position position) 
+	public Case getCase(Position position) 
 	{
-		return this.cars[position.obtenirNumeroDeLigne()][position.obtenirNumeroDeColonne()];
+		return this.cars[position.getLineNumber()][position.getColumnNumber()];
 	}
 	
-	public Case obtenirCase(int ligne, int colonne) 
+	
+	/**
+	 * get the case of the grid for a given position
+	 * @param position the position
+	 * @return the case of the grid for a given position
+	 */
+	public Case getCase(int ligne, int colonne) 
 	{
 		return this.cars[ligne][colonne]; 
 	}
@@ -53,9 +59,9 @@ public class Grid {
 	 * @param position the position
 	 * @return the vehicle on the case or null if we have nothing
 	 */
-	public Vehicle obtenirVehicle(Position position)
+	public Vehicle getVehicle(Position position)
 	{
-		return obtenirCase(position).obtenirVehicle();
+		return getCase(position).obtenirVehicle();
 	}
 	
 	/**
@@ -65,10 +71,10 @@ public class Grid {
 	 */
 	public void deplaceVehicle(Position positionStart, Position positionEnd)
 	{
-		Vehicle vehicleADeplacer = this.obtenirVehicle(positionStart);
+		Vehicle vehicleADeplacer = this.getVehicle(positionStart);
 		if (vehicleADeplacer == null) return;
-		this.obtenirCase(positionEnd).placeVehicle(vehicleADeplacer);
-		this.obtenirCase(positionStart).removeVehicle();
+		this.getCase(positionEnd).placeVehicle(vehicleADeplacer);
+		this.getCase(positionStart).removeVehicle();
 	}
 	
 
@@ -82,7 +88,7 @@ public class Grid {
 		for (int numeroDeLigne = 0; numeroDeLigne < DEFAULT_LENGTH; numeroDeLigne++) 
 		{
 			for (int numeroDeColonne = 0; numeroDeColonne < DEFAULT_WIDTH; numeroDeColonne++)
-				GridAsciiArt += this.obtenirCase(new Position(numeroDeLigne, numeroDeColonne));
+				GridAsciiArt += this.getCase(new Position(numeroDeLigne, numeroDeColonne));
 			GridAsciiArt += "\n";
 		}
 		return GridAsciiArt;

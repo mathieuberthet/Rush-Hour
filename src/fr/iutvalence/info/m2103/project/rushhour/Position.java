@@ -6,48 +6,43 @@ package fr.iutvalence.info.m2103.project.rushhour;
  */
 public class Position {
 	/**
-	 * Le numéro de ligne
+	 * line number
 	 */
-	private final int numeroDeLigne;
+	private final int line_number;
 
 	/**
-	 * Le numéro de colonne
+	 * column number
 	 */
-	private final int numeroDeColonne;
+	private final int coloumn_number;
 	
 	
 	/**
-	 * Construit une nouvelle position, à l'intersection ligne/colonne donnée
-	 * @param numeroDeLigne le numéro de ligne
-	 * @param numeroDeColonne le numéro de colonne
+	 * Constructs a new position at the intersection of the line and the column
+	 * @param linenumber the line number
+	 * @param columnnumber the column number
 	 */
-	public Position(int numeroDeLigne, int numeroDeColonne)
+	public Position(int linenumber, int columnnumber)
 	{
-		this.numeroDeLigne = numeroDeLigne;
-		this.numeroDeColonne = numeroDeColonne;
+		this.line_number = linenumber;
+		this.coloumn_number = columnnumber;
 	}
 	
 	/**
-	 * Obtenir le numéro de ligne
-	 * @return le numéro de ligne
+	 * get line number
+	 * @return number of line
 	 */
-	public int obtenirNumeroDeLigne()
+	public int getLineNumber()
 	{
-		return this.numeroDeLigne;
+		return this.line_number;
 	}
 
 	/**
-	 * Obtenir le numéro de colonne
-	 * @return le numéro de colonne
+	 * get column number
+	 * @return number of column
 	 */
-	public int obtenirNumeroDeColonne()
+	public int getColumnNumber()
 	{
-		return this.numeroDeColonne;
+		return this.coloumn_number;
 	}
 	
-	public static Position obtenirPosition()
-	{
-		return this.position;
-	}
-
 }

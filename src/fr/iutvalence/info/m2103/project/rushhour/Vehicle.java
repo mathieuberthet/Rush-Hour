@@ -39,7 +39,7 @@ public abstract class Vehicle
 	 * @param size size's vehicle
 	 * @param color color's vehicle
 	 */
-	public Vehicle(boolean Vertical, int size, Color color, Position position)
+	public Vehicle(boolean Vertical, int size, Color color)
 	{
 		this.setVertical(Vertical);
 		this.setSize(size);

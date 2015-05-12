@@ -55,6 +55,10 @@ public class Case {
 		this.vehicle = vehicle;
 	}
 	
+	
+	/**
+	 * remove a vehicle from a case
+	 */
 	public void removeVehicle()
 	{
 		this.vehicle = null;
