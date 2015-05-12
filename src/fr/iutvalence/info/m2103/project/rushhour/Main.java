@@ -13,8 +13,7 @@ public class Main {
 	 */
 	public static void main(String[] args) 
 	{
-		System.out.println(new Grid());
-//		new RushHourGame().play();
+		new RushHourGame().play();
 
 	}
 

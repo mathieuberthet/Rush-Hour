@@ -8,13 +8,9 @@ package fr.iutvalence.info.m2103.project.rushhour;
  *
  */
 public class RushHourGame {
-
 	
-	// TODO this is not a constructor
-	public void createGrid()
-	{
-	//	this.Grid = 
-	}
+	private final Grid grid;
+	
 
 	// TODO (done) fix naming conventions
 	/**
@@ -23,6 +19,19 @@ public class RushHourGame {
 	public void play() 
 	{
 		
+	}
+	
+	public RushHourGame() 
+	{
+		this.grid = new Grid();
+		for(int ligne; ligne < Grid.DEFAULT_LENGTH; ligne++)
+		{
+			for (int colonne; colonne < Grid.DEFAULT_WIDTH; colonne++)
+			{
+				grid.obtenirCase(ligne, colonne).placeVehicle(new Vehicle(true, 2, Color.getRandomColor()));
+				
+			}
+		}
 	}
 
 }

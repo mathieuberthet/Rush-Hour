@@ -10,12 +10,12 @@ public class Grid {
 	/**
 	 * Define the length of the grid
 	 */
-	private final static int DEFAULT_LENGTH = 6;
+	public final static int DEFAULT_LENGTH = 6;
 
 	/**
 	 * Define the width of the grid
 	 */
-	private final static int DEFAULT_WIDTH = 6;
+	public final static int DEFAULT_WIDTH = 6;
 
 	/**
 	 * Grid cells
@@ -38,6 +38,11 @@ public class Grid {
 	public Case obtenirCase(Position position) 
 	{
 		return this.cases[position.obtenirNumeroDeLigne()][position.obtenirNumeroDeColonne()];
+	}
+	
+	public Case obtenirCase(int ligne, int colonne) 
+	{
+		return this.cases[ligne][colonne]; 
 	}
 	
 	/**
