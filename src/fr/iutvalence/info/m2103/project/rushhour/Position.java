@@ -15,6 +15,7 @@ public class Position {
 	 */
 	private final int numeroDeColonne;
 	
+	
 	/**
 	 * Construit une nouvelle position, à l'intersection ligne/colonne donnée
 	 * @param numeroDeLigne le numéro de ligne
@@ -42,6 +43,11 @@ public class Position {
 	public int obtenirNumeroDeColonne()
 	{
 		return this.numeroDeColonne;
+	}
+	
+	public static Position obtenirPosition()
+	{
+		return this.position;
 	}
 
 }

@@ -16,18 +16,21 @@ public class Grid {
 	 * Define the width of the grid
 	 */
 	public final static int DEFAULT_WIDTH = 6;
+	
+	private Position position;
 
 	/**
 	 * Grid cells
 	 */
 	// TODO (done) this is not a grid but a grid of grid (of grid...)
-	private Case[][] cases;
+	private Car[] cars;
 
 	/**
 	 * Create a new empty board
 	 */
-	public Grid() {
-		this.cases = new Case[DEFAULT_LENGTH][DEFAULT_WIDTH];
+	public Grid() 
+	{
+		this.cars = new Car[Position.obtenirPosition()];
 	}
 	
 /**
@@ -37,12 +40,12 @@ public class Grid {
  */
 	public Case obtenirCase(Position position) 
 	{
-		return this.cases[position.obtenirNumeroDeLigne()][position.obtenirNumeroDeColonne()];
+		return this.cars[position.obtenirNumeroDeLigne()][position.obtenirNumeroDeColonne()];
 	}
 	
 	public Case obtenirCase(int ligne, int colonne) 
 	{
-		return this.cases[ligne][colonne]; 
+		return this.cars[ligne][colonne]; 
 	}
 	
 	/**

@@ -28,8 +28,7 @@ public class RushHourGame {
 		{
 			for (int colonne; colonne < Grid.DEFAULT_WIDTH; colonne++)
 			{
-				grid.obtenirCase(ligne, colonne).placeVehicle(new Vehicle(true, 2, Color.getRandomColor()));
-				
+				grid.obtenirCase(ligne, colonne).placeVehicle(new Vehicle(true, 2, Color.getRandomColor(), Position.obtenirPosition()));
 			}
 		}
 	}
