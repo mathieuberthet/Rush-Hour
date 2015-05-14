@@ -17,8 +17,8 @@ public class Car extends Vehicle
 	 * @param size the size of the car
 	 * @param color the color of the car
 	 */
-	public Car(boolean Vertical, int size, Color color)
+	public Car(boolean Vertical, int size, Color color, int line, int column)
 	{
-		super(Vertical, DEFAULT_SIZE, color);
+		super(Vertical, DEFAULT_SIZE, color, line, column);
 	}
 }

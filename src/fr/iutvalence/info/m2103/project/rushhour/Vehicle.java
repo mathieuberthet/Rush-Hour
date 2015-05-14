@@ -24,6 +24,10 @@ public abstract class Vehicle
 	 */
 	private Color color;
 	
+	private int line;
+	
+	private int column;
+	
 	
 	/**
 	 * create an object vehicle 
@@ -33,17 +37,21 @@ public abstract class Vehicle
 		this.setVertical(Vertical);
 		this.setSize(size);
 		this.setColor(color);
+		this.setLine(line);
+		this.setColumn(column);
 	}
 	/**
 	 * create an object vehicle with define both size and color
 	 * @param size size's vehicle
 	 * @param color color's vehicle
 	 */
-	public Vehicle(boolean Vertical, int size, Color color)
+	public Vehicle(boolean Vertical, int size, Color color, int line, int column)
 	{
 		this.setVertical(Vertical);
 		this.setSize(size);
 		this.setColor(color);
+		this.setLine(line);
+		this.setColumn(column);
 	}
 
 	
@@ -95,6 +103,40 @@ public abstract class Vehicle
 	public void setSize(int size) 
 	{
 		this.size = size;
+	}
+	
+	/**
+	 * get line
+	 * @return line
+	 */
+	public int getLine() 
+	{
+		return line;
+	}
+	
+	/**
+	 * set line
+	 * @param line
+	 */
+	public void setLine(int line) 
+	{
+		this.line = line;
+	}
+	
+	/**
+	 * get column
+	 * @return column
+	 */
+	public int getColumn() {
+		return column;
+	}
+	
+	/**
+	 * set column
+	 * @param column
+	 */
+	public void setColumn(int column) {
+		this.column = column;
 	}
 }
 

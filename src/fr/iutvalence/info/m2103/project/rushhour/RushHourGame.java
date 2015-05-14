@@ -20,11 +20,11 @@ public class RushHourGame {
 	public RushHourGame() 
 	{
 		this.grid = new Grid();
-		for(int ligne; ligne < Grid.DEFAULT_LENGTH; ligne++)
+		for(int line; line < Grid.DEFAULT_LENGTH; line++)
 		{
-			for (int colonne; colonne < Grid.DEFAULT_WIDTH; colonne++)
+			for (int column; column < Grid.DEFAULT_WIDTH; column++)
 			{
-				grid.getCase(ligne, colonne).placeVehicle(new Vehicle(true, 2, Color.getRandomColor(), Position.obtenirPosition()));
+				grid.getCase(line, column).placeCar(new Car(true, 2, Color.getRandomColor()));
 			}
 		}
 	}

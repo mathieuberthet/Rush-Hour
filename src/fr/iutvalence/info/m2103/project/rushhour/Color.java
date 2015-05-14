@@ -12,6 +12,7 @@ public enum Color
 	//TODO (done) one comment by constant
 	/**
 	 * In this class we have some colors which can be applied on vehicles
+	 * red : main car's color
 	 * blue : vehicle's color
 	 * green : vehicle's color
 	 * yellow : vehicle's color

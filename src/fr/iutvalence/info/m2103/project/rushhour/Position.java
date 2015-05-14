@@ -8,12 +8,12 @@ public class Position {
 	/**
 	 * line number
 	 */
-	private final int line_number;
+	private int line_number;
 
 	/**
 	 * column number
 	 */
-	private final int coloumn_number;
+	private int coloumn_number;
 	
 	
 	/**
