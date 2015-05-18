@@ -76,24 +76,27 @@ public class Grid {
 		Vehicle vehicleADeplacer = this.getVehicle(positionStart);
 		if (vehicleADeplacer == null)
 			return;
+		
 		if ((direction == Direction.E || direction == Direction.W)
 				&& this.getVehicle(positionStart).isVertical())
 			return;
+		
 		if ((direction == Direction.N || direction == Direction.S)
 				&& !this.getVehicle(positionStart).isVertical())
 			return;
+		
 		// Test for a vehicule presence
 		if (this.getVehicle(new Position(positionStart.getLineNumber() + 1,
-				positionStart.getColumnNumber())) != null
-				&& direction == Direction.S) {
+				positionStart.getColumnNumber())) != null && direction == Direction.S) 
+		{
 			this.moveVehicle(positionStart,
 					new Position(positionStart.getLineNumber() + 1,
 							positionStart.getColumnNumber()));
 			return;
 		}
 		if (this.getVehicle(new Position(positionStart.getLineNumber(),
-				positionStart.getColumnNumber() + 1)) != null
-				&& direction == Direction.E) {
+				positionStart.getColumnNumber() + 1)) != null && direction == Direction.E) 
+		{
 			this.moveVehicle(
 					positionStart,
 					new Position(positionStart.getLineNumber(), positionStart
@@ -101,16 +104,16 @@ public class Grid {
 			return;
 		}
 		if (this.getVehicle(new Position(positionStart.getLineNumber() - 1,
-				positionStart.getColumnNumber())) != null
-				&& direction == Direction.N) {
+				positionStart.getColumnNumber())) != null && direction == Direction.N) 
+		{
 			this.moveVehicle(positionStart,
 					new Position(positionStart.getLineNumber() - 1,
 							positionStart.getColumnNumber()));
 			return;
 		}
 		if (this.getVehicle(new Position(positionStart.getLineNumber(),
-				positionStart.getColumnNumber() - 1)) != null
-				&& direction == Direction.W) {
+				positionStart.getColumnNumber() - 1)) != null && direction == Direction.W) 
+		{
 			this.moveVehicle(
 					positionStart,
 					new Position(positionStart.getLineNumber(), positionStart
@@ -120,11 +123,16 @@ public class Grid {
 
 	}
 
+	/**
+	 * move a vehicule
+	 * @param positionStart
+	 * @param position
+	 */
 	private void moveVehicle(Position positionStart, Position position) {
-		Vehicle tempVehicle = this.getVehicle(positionStart);
+		Vehicle temporaryVehicle = this.getVehicle(positionStart);
 		this.getCase(positionStart).removeVehicle();
 		this.getCase(positionStart)
-				.placeVehicle(tempVehicle);
+				.placeVehicle(temporaryVehicle);
 	}
 
 	/**

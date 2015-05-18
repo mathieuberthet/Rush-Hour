@@ -21,7 +21,11 @@ public class RushHourGame {
 	{
 		this.grid = new Grid(new Car[] {
 				new Car(true, 2, Color.getRandomColor(), 1, 1),
-				new Car()//To complete
+				new Car(true, 2, Color.getRandomColor(), 2, 3),
+				new Car(false, 2, Color.getRandomColor(), 6, 1),
+				new Car(false, 2, Color.getRandomColor(), 3, 1),
+				new Car(true, 2, Color.getRandomColor(), 3, 5),
+				new Car(false, 2, Color.getRandomColor(), 5, 6),
 				
 		});
 	}
