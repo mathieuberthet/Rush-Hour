@@ -24,13 +24,6 @@ public class RushHourGame {
 				new Car()//To complete
 				
 		});
-		for(int line; line < Grid.DEFAULT_LENGTH; line++)
-		{
-			for (int column; column < Grid.DEFAULT_WIDTH; column++)
-			{
-				grid.getCase(line, column).placeCar(new Car(true, 2, Color.getRandomColor()));
-			}
-		}
 	}
 	
 	/**
