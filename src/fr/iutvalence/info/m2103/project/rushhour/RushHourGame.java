@@ -19,7 +19,11 @@ public class RushHourGame {
 	 */
 	public RushHourGame() 
 	{
-		this.grid = new Grid();
+		this.grid = new Grid(new Car[] {
+				new Car(true, 2, Color.getRandomColor(), 1, 1),
+				new Car()//To complete
+				
+		});
 		for(int line; line < Grid.DEFAULT_LENGTH; line++)
 		{
 			for (int column; column < Grid.DEFAULT_WIDTH; column++)
