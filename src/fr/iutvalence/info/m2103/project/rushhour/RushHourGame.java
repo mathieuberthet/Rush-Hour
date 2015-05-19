@@ -7,7 +7,8 @@ package fr.iutvalence.info.m2103.project.rushhour;
  * @author BERTHET Mathieu, BARRA Jérémy
  *
  */
-public class RushHourGame {
+public class RushHourGame 
+{
 	
 	private final Grid grid;
 	
@@ -19,11 +20,12 @@ public class RushHourGame {
 	 */
 	public RushHourGame() 
 	{
-		this.grid = new Grid(new Car[] {
+		this.grid = new Grid(new Car[] 
+		{
 				new Car(true, 2, Color.getRandomColor(), 1, 1),
 				new Car(true, 2, Color.getRandomColor(), 2, 3),
 				new Car(false, 2, Color.getRandomColor(), 6, 1),
-				new Car(false, 2, Color.getRandomColor(), 3, 1),
+				new Car(false, 2, Color.RED, 3, 1),
 				new Car(true, 2, Color.getRandomColor(), 3, 5),
 				new Car(false, 2, Color.getRandomColor(), 5, 6),
 				
@@ -36,5 +38,16 @@ public class RushHourGame {
 	public void play() 
 	{
 		
+	}
+	
+	private boolean gameWon()
+	{
+		if(Car(Vertical, size, color, line, column)== Car(false, 2, Color.RED, 3, 6))
+		{
+			System.out.println("You win !");
+			return true;
+		}
+			
+		return false;
 	}
 }

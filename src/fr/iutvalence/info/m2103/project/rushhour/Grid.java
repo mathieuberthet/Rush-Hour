@@ -37,8 +37,9 @@ public class Grid {
 	 *            the position
 	 * @return the case of the grid for a given position
 	 */
-	public Case getCase(Position position) {
-		return this.cars[position.getLineNumber()][position.getColumnNumber()];
+	public Position getCase(Position position) 
+	{
+		return this.cars[line_number.getLineNumber(),column_number.getColumnNumber()];
 	}
 
 	/**

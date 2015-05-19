@@ -22,3 +22,5 @@ public class Car extends Vehicle
 		super(Vertical, DEFAULT_SIZE, color, line, column);
 	}
 }
+
+

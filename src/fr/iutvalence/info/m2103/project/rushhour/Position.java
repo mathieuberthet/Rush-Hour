@@ -13,7 +13,7 @@ public class Position {
 	/**
 	 * column number
 	 */
-	private int coloumn_number;
+	private int column_number;
 	
 	
 	/**
@@ -24,7 +24,7 @@ public class Position {
 	public Position(int linenumber, int columnnumber)
 	{
 		this.line_number = linenumber;
-		this.coloumn_number = columnnumber;
+		this.column_number = columnnumber;
 	}
 	
 	/**
@@ -42,7 +42,7 @@ public class Position {
 	 */
 	public int getColumnNumber()
 	{
-		return this.coloumn_number;
+		return this.column_number;
 	}
 	
 }
